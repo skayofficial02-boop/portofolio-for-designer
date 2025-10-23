@@ -1,0 +1,284 @@
+/* Reset Dasar & Font */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #FAFAFA;
+    color: #262626;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Halaman Login --- */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    margin-top: 50px;
+}
+
+.login-box, .signup-box {
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    width: 350px;
+    padding: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.login-logo {
+    font-family: 'Billabong', 'Grand Hotel', cursive; /* Anda perlu mengimpor font ini jika ingin persis */
+    font-size: 48px;
+    margin: 0 0 30px;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Agar padding tidak merusak lebar */
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+}
+
+#login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0095F6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#login-form button:disabled {
+    background-color: #B2DFFC;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #8E8E8E;
+    margin: 20px 0;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #DBDBDB;
+}
+.separator:not(:empty)::before { margin-right: .25em; }
+.separator:not(:empty)::after { margin-left: .25em; }
+
+.facebook-login {
+    color: #385185;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    color: #00376B;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.signup-box p {
+    margin: 15px;
+}
+.signup-box a {
+    color: #0095F6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* --- Halaman Beranda (Homepage) --- */
+
+/* Navigasi */
+.navbar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #DBDBDB;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 975px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.nav-logo {
+    font-family: 'Billabong', 'Grand Hotel', cursive;
+    font-size: 28px;
+}
+
+.nav-search input {
+    background-color: #EFEFEF;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    padding: 5px 10px;
+    width: 215px;
+    text-align: center;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.nav-profile-pic {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Konten Utama */
+.main-content {
+    display: flex;
+    justify-content: center;
+    max-width: 975px;
+    margin: 30px auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+.feed {
+    width: 614px;
+}
+
+.sidebar {
+    width: 293px;
+    position: sticky;
+    top: 80px; /* (tinggi navbar + margin) */
+    height: 100vh;
+}
+
+/* Postingan */
+.post {
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    margin-bottom: 24px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+}
+
+.post-profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.post-username {
+    font-weight: bold;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+}
+
+.post-footer {
+    padding: 10px 16px;
+}
+
+.post-actions {
+    font-size: 24px;
+}
+.post-actions span {
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.post-likes {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.post-caption {
+    font-size: 14px;
+    margin-top: 8px;
+}
+.post-caption .post-username {
+    margin-right: 5px;
+}
+
+.post-comments {
+    font-size: 14px;
+    color: #8E8E8E;
+    margin-top: 8px;
+}
+
+/* Sidebar */
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.sidebar-profile-pic {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+.sidebar-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-username { font-weight: bold; }
+.sidebar-realname { color: #8E8E8E; }
+.sidebar-switch {
+    margin-left: auto;
+    color: #0095F6;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.sidebar-suggestions p {
+    color: #8E8E8E;
+    font-weight: bold;
+    font-size: 14px;
+}
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.suggestion-item img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+.suggestion-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+.suggestion-meta { color: #8E8E8E; }
+.sidebar-follow {
+    margin-left: auto;
+    color: #0095F6;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+}
